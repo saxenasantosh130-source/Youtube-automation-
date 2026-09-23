@@ -1,4 +1,4 @@
-import os
+ import os
 import requests
 import imageio_ffmpeg
 from flask import Flask, render_template_string, request, send_file, send_from_directory
