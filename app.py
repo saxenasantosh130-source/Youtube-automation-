@@ -89,7 +89,7 @@ def generate_ai_script(user_prompt):
         if not ai_client:
             return "Error: GEMINI_API_KEY missing in Environment Variables"
         response = ai_client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-3.6-flash',
             contents=f"Write a short, viral YouTube Shorts script in simple Hindi/Hinglish based on prompt: '{user_prompt}'. Keep it crisp, engaging, and suitable for voiceover under 40 words."
         )
         return response.text.strip()
