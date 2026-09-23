@@ -19,9 +19,11 @@ SCOPES = ['https://www.googleapis.com/auth/youtube.upload']
 
 # Environment variables se keys uthayega
 PEXELS_API_KEY = os.environ.get('ELlbnrqmKO7JH4ms1NElyzWcxZog5N4TsNqnmMBVj7p41ctxjnOakPq4', '')
-GEMINI_API_KEY = os.environ.get('AQ.Ab8RN6JNn8tFpCTXGz5SDIc9Mrkek-Gdh4o175bY7SX6j7QcKg')
+# Environment variable se key lega, agar na mile toh direct key use karega
+GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', 'AQ.Ab8RN6JNn8tFpCTXGz5SDIc9Mrkek-Gdh4o175bY7SX6j7QcKg')
 
 ai_client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
+
 
 HTML_TEMPLATE = '''
 <!DOCTYPE html>
